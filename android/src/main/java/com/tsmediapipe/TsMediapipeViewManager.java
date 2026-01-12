@@ -277,6 +277,11 @@ public class TsMediapipeViewManager extends ViewGroupManager<FrameLayout> {
     GlobalState.isRightAnkleEnabled = rightAnkle;
   }
 
+  @ReactProp(name = "skeleton")
+  public void setSkeletonProp(View view, boolean skeleton) {
+    GlobalState.isSkeletonEnabled = skeleton;
+  }
+
   /**
    * Replace your React Native view with a custom fragment
    */

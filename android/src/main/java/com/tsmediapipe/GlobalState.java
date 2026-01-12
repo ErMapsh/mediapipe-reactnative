@@ -11,6 +11,7 @@ public class GlobalState {
   public static boolean isRightLegEnabled = false;
   public static boolean isLeftAnkleEnabled = false;
   public static boolean isRightAnkleEnabled = false;
+  public static boolean isSkeletonEnabled = true;
 
   public static String orientation = "portrait";
 }

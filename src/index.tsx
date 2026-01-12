@@ -38,6 +38,7 @@ type TsMediapipeProps = {
   width?: number;
   poseStarted?: number;
   frameLimit?: number; // ios only(set the frame rate during initialization)
+  skeleton?: boolean;
 };
 
 type MediapipeComponentProps = TsMediapipeProps & {
@@ -84,6 +85,7 @@ const TsMediapipeView: React.FC<MediapipeComponentProps> = (props) => {
     leftAnkle = true,
     rightAnkle = true,
     frameLimit = 20, // ios only(set the frame rate during initialization)
+    skeleton = true,
   } = props;
   const ref = useRef(null);
 
@@ -141,6 +143,7 @@ const TsMediapipeView: React.FC<MediapipeComponentProps> = (props) => {
         rightLeg={rightLeg}
         leftAnkle={leftAnkle}
         rightAnkle={rightAnkle}
+        skeleton={skeleton}
         ref={ref}
         frameLimit={frameLimit} // ios only(set the frame rate during initialization)
       />

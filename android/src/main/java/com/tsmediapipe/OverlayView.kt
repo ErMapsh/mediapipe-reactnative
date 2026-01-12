@@ -50,6 +50,11 @@ class OverlayView(context: Context?, attrs: AttributeSet?) :
   override fun draw(canvas: Canvas) {
     super.draw(canvas)
 
+    // If skeleton drawing is disabled, skip drawing overlays
+    if (!GlobalState.isSkeletonEnabled) {
+      return
+    }
+
     val face = GlobalState.isFaceEnabled
     val torso = GlobalState.isTorsoEnabled
     val leftArm = GlobalState.isLeftArmEnabled
